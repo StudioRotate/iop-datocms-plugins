@@ -12,6 +12,6 @@ export default function Price({ amount, currencyCode }) {
 }
 
 Price.propTypes = {
-  amount: PropTypes.number.isRequired,
+  amount: PropTypes.string.isRequired,
   currencyCode: PropTypes.string.isRequired,
 };

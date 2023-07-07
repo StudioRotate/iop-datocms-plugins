@@ -62,6 +62,7 @@ export default class ShopifyClient {
   }
 
   productById(id) {
+    const decodedId = btoa(id);
     return this.fetch({
       query: `
         query getProduct($id: ID!) {
@@ -72,7 +73,7 @@ export default class ShopifyClient {
           }
         }
       `,
-      variables: { id },
+      variables: { id: decodedId },
     }).then(result => normalizeProduct(result.node));
   }
 
