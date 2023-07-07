@@ -78,7 +78,7 @@ export default class ShopifyClient {
 
   fetch(body) {
     return fetch(
-      `https://${this.shopifyDomain}.myshopify.com/api/graphql`,
+      `https://${this.shopifyDomain}.myshopify.com/api/2023-07/graphql`,
       {
         method: 'POST',
         headers: {
